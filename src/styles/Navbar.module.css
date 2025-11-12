@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1f2937;
+  color: white;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #fbbf24;
+}
+.confirmBtn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.confirmBtn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
