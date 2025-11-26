@@ -18,7 +18,7 @@ const Home = () => {
         <div className={styles.overlay}></div>
         <div className={styles.heroContent}>
           <h1>Find Trusted & Skilled Workers Near You</h1>
-          <p>UrbanWorkers helps you hire professionals instantly. Fast, reliable & affordable service.</p>
+          <p>HireHub helps you hire professionals instantly. Fast, reliable & affordable service.</p>
           <Link to="/workers">
             <button className={styles.heroBtn}>Explore Workers</button>
           </Link>
@@ -66,7 +66,7 @@ const Home = () => {
       {/* Call to Action */}
       <div className={styles.ctaSection}>
         <h2>Are You a Professional Worker?</h2>
-        <p>Join UrbanWorkers and get more clients every day!</p>
+        <p>Join HireHub and get more clients every day!</p>
         <Link to="/add-worker">
           <button className={styles.ctaBtn}>Register as Worker</button>
         </Link>

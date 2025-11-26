@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Brand Section */}
         <div className={styles.section}>
-          <h2 className={styles.logo}>UrbanWorkers</h2>
+          <h2 className={styles.logo}>HireHub</h2>
           <p className={styles.desc}>
             Your trusted platform to hire skilled professionals instantly.
           </p>
@@ -29,14 +29,14 @@ const Footer = () => {
         {/* Contact */}
         <div className={styles.section}>
           <h3 className={styles.heading}>Contact</h3>
-          <p>Email: support@urbanworkers.com</p>
+          <p>Email: support@HireHub.com</p>
           <p>Phone: +91 9876543210</p>
         </div>
       </div>
 
       {/* Bottom Text */}
       <div className={styles.bottom}>
-        © {new Date().getFullYear()} UrbanWorkers. All Rights Reserved.
+        © {new Date().getFullYear()} HireHub. All Rights Reserved.
       </div>
     </footer>
   );
