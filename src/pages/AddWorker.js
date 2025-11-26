@@ -1,10 +1,16 @@
 import React, { useState, useContext } from "react";
 import Navbar from "../components/Navbar";
 import { WorkerContext } from "../context/WorkerContext";
+import styles from "../styles/AddWorker.module.css";
 
 const AddWorker = () => {
   const { addWorker } = useContext(WorkerContext);
-  const [worker, setWorker] = useState({ name: "", profession: "", price: "" });
+
+  const [worker, setWorker] = useState({
+    name: "",
+    profession: "",
+    price: "",
+  });
 
   const handleChange = (e) => {
     setWorker({ ...worker, [e.target.name]: e.target.value });
@@ -20,32 +26,42 @@ const AddWorker = () => {
   return (
     <>
       <Navbar />
-      <div style={{ maxWidth: "500px", margin: "50px auto" }}>
-        <h2>Add Worker</h2>
+
+      <div className={styles.container}>
+        <h2 className={styles.title}>Add New Worker</h2>
+
         <form onSubmit={handleSubmit}>
           <input
             name="name"
             value={worker.name}
             onChange={handleChange}
-            placeholder="Name"
+            placeholder="Worker Name"
             required
-          /><br /><br />
+            className={styles.input}
+          />
+
           <input
             name="profession"
             value={worker.profession}
             onChange={handleChange}
-            placeholder="Profession"
+            placeholder="Profession (e.g., Electrician)"
             required
-          /><br /><br />
+            className={styles.input}
+          />
+
           <input
             name="price"
             value={worker.price}
             onChange={handleChange}
-            placeholder="Hourly Rate"
+            placeholder="Hourly Rate (₹)"
             type="number"
             required
-          /><br /><br />
-          <button type="submit">Add Worker</button>
+            className={styles.input}
+          />
+
+          <button type="submit" className={styles.button}>
+            Add Worker
+          </button>
         </form>
       </div>
     </>

@@ -1,0 +1,64 @@
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 20px 10px;
+  margin-top: 40px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.desc {
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.heading {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+}
+
+.section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.section ul li a:hover {
+  color: #fff;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

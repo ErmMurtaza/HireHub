@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { WorkerContext } from "../context/WorkerContext";
 import Navbar from "../components/Navbar";
+import styles from "../styles/Booking.module.css";
 
 const Booking = () => {
   const { id } = useParams();
@@ -10,38 +11,63 @@ const Booking = () => {
   const [hours, setHours] = useState(1);
   const [paid, setPaid] = useState(false);
 
+  if (!worker) return <p>Worker not found</p>;
+
+  const totalAmount = hours * worker.price;
+
   const handleBooking = () => {
-    addBooking({ workerId: worker.id, hours, total: hours * worker.price });
+    addBooking({ workerId: worker.id, hours, total: totalAmount });
     alert("Booking successful!");
   };
 
-  if (!worker) return <p>Worker not found</p>;
-
-    const handlePayment = () => {
-    alert(`Paid ₹${hours * worker.price} successfully!`);
+  const handlePayment = () => {
+    alert(`Paid ₹${totalAmount} successfully!`);
     setPaid(true);
     handleBooking();
-    };
+  };
 
-    // in JSX
-    
   return (
     <>
       <Navbar />
-      <div style={{ padding: "20px" }}>
-        <h2>Booking {worker.name}</h2>
-        <p>Profession: {worker.profession}</p>
-        <p>Hourly Rate: ₹{worker.price}</p>
-        <input
-          type="number"
-          value={hours}
-          onChange={(e) => setHours(parseInt(e.target.value))}
-          min="1"
-        /> hours
-        <p>Total: ₹{hours * worker.price}</p>
-        <button onClick={handleBooking}>Confirm Booking</button>
-        {!paid && <button onClick={handlePayment}>Pay & Book</button>}
-        {paid && <p>Booking Confirmed!</p>}
+
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2>Book {worker.name}</h2>
+        </div>
+
+        <div className={styles.workerImg}>
+          <img src={`https://i.pravatar.cc/150?u=${worker.id}`} alt={worker.name} />
+        </div>
+
+        <div className={styles.details}>
+          <p><strong>Profession:</strong> {worker.profession}</p>
+          <p><strong>Hourly Rate:</strong> ₹{worker.price}</p>
+        </div>
+
+        <div className={styles.inputBox}>
+          <label><strong>Hours Required:</strong></label>
+          <br />
+          <input
+            type="number"
+            value={hours}
+            min="1"
+            onChange={(e) => setHours(parseInt(e.target.value))}
+          />
+        </div>
+
+        <p className={styles.total}>Total: ₹{totalAmount}</p>
+
+        <button className={styles.btnPrimary} onClick={handleBooking}>
+          Confirm Booking
+        </button>
+
+        {!paid && (
+          <button className={styles.btnPay} onClick={handlePayment}>
+            Pay & Book
+          </button>
+        )}
+
+        {paid && <p className={styles.confirmMsg}>✔ Booking Confirmed!</p>}
       </div>
     </>
   );

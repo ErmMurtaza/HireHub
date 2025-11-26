@@ -48,13 +48,13 @@
   width: 220px;
   text-align: center;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .workerCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .workerCard h3 {
@@ -101,4 +101,164 @@
   .workerCard {
     width: 100%;
   }
+}
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("https://images.unsplash.com/photo-1581091012184-7f1a2e36ddf9?auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.heroContent {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  max-width: 650px;
+}
+
+.heroContent h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.heroBtn {
+  padding: 12px 30px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.heroBtn:hover {
+  background-color: #e68900;
+}
+
+/* Section Layout */
+.section {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Categories */
+.categoryRow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.categoryCard {
+  background: #f5f5f5;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.categoryCard:hover {
+  background: #2196f3;
+  color: white;
+}
+
+/* Featured Workers */
+.workerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.workerCard {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.workerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.workerImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 5px;
+}
+
+.bookBtn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #4a90e2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  background: #357ac9;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: #f4f4f4;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.ctaBtn {
+  padding: 12px 30px;
+  background: #2196f3;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.ctaBtn:hover {
+  background: #0d82d9;
 }

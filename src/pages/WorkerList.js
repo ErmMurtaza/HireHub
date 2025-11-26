@@ -3,6 +3,7 @@ import { WorkerContext } from "../context/WorkerContext";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import styles from "../styles/WorkerList.module.css";
+import Footer from "../components/Footer";
 
 const WorkerList = () => {
   const { workers, addWorker, setWorkers } = useContext(WorkerContext);
@@ -97,6 +98,7 @@ const WorkerList = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
