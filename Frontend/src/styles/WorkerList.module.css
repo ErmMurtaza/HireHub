@@ -33,7 +33,7 @@ h2 {
 
 .filters input:focus,
 .filters select:focus {
-  border-color: #4a90e2;
+  border-color: #344a77;
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
 }
 
@@ -86,7 +86,7 @@ h2 {
 
 /* Button styles */
 .workerCard button:first-of-type {
-  background-color: #4a90e2;
+  background-color: #344a77;
   color: white;
 }
 .workerCard button:first-of-type:hover {
