@@ -23,5 +23,10 @@ HireHub is a full-stack worker booking platform built using **React** for fronte
 - MVC Architecture
 
 ---
+## 📸 Application Screenshots
+
+<p align="center">
+  <img src="screenshots/screenshot.jpg" width="600" />
+</p>
 
 ## 📂 Project Structure
